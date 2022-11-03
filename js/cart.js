@@ -57,7 +57,11 @@ window.addEventListener('click', function (event) {
 			// добавляет HTML в указанную область
 			cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
 		}
-		card.querySelector('[data-counter]').innerText = '1'
+		
+		card.querySelector('[data-counter]').innerText = '1';
+
+		//проверяем наличие товаров в корзине
+		toogleCartStatus();
 	}
 
 

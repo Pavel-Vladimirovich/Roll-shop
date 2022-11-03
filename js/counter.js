@@ -17,7 +17,10 @@ window.addEventListener('click', function (event) {
             
         }else if((event.target.closest('.cart-wrapper') && parseInt(counter.textContent) === 1)){
             //удаляем товар из корзины
-            event.target.closest('.cart-item').remove()
+            event.target.closest('.cart-item').remove();
+            
+            //проверяем наличие товаров в корзине
+            toogleCartStatus();
         }
     }
     if (event.target.dataset.action === 'plus') {
