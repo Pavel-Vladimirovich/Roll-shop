@@ -14,6 +14,10 @@ window.addEventListener('click', function (event) {
     if (event.target.dataset.action === 'minus') {
         if (parseInt(counter.textContent) > 1) {
             counter.textContent--
+            
+        }else if((event.target.closest('.cart-wrapper') && parseInt(counter.textContent) === 1)){
+            //удаляем товар из корзины
+            event.target.closest('.cart-item').remove()
         }
     }
     if (event.target.dataset.action === 'plus') {
