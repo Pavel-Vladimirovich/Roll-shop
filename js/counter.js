@@ -20,10 +20,16 @@ window.addEventListener('click', function (event) {
             event.target.closest('.cart-item').remove();
             
             //проверяем наличие товаров в корзине
-            toogleCartStatus();
+            // toogleCartStatus();
+            //подсчитываем общую стоимость в козине
+            calcCartPrice();
         }
     }
     if (event.target.dataset.action === 'plus') {
         counter.textContent++
+    }
+    //подсчитываем общую стоимость в козине
+    if(event.target.closest('.cart-wrapper') && event.target.hasAttribute('data-action')){
+        calcCartPrice();
     }
 });
