@@ -61,9 +61,10 @@ window.addEventListener('click', function (event) {
 		card.querySelector('[data-counter]').innerText = '1';
 
 		//проверяем наличие товаров в корзине
-		// toogleCartStatus();
+		toogleCartStatus();
+		
 		//подсчет стоимости товаров в корзине
-		calcCartPrice()
+		calcCartPrice();
 
 	}
 })

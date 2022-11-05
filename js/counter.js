@@ -20,7 +20,7 @@ window.addEventListener('click', function (event) {
             event.target.closest('.cart-item').remove();
             
             //проверяем наличие товаров в корзине
-            // toogleCartStatus();
+            toogleCartStatus();
             //подсчитываем общую стоимость в козине
             calcCartPrice();
         }

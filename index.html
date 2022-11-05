@@ -26,103 +26,18 @@
 	<div class="container bg-light">
 		<div class="row">
 			<div class="col-8">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="01">
-							<img class="product-img" src="img/roll/philadelphia.jpg" alt="jpg">
-							<div class="card-body text-cente r">
-								<h4 class="item-title">Филадельфия хит ролл</h4>
-								<p><small class="card-text text-secondary" data-items-in-box> 6 шт.</small></p>
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-									<div class="price">
-										<div class="price__weight text-secondary"><small>180г.</small></div>
-										<div class="price__currency">14,4 руб.</div>
-									</div>
-								</div>
-								<button data-cart href="#" class="btn btn-outline-dark btn-block">добавить в
-									корзину</button>
-							</div>
-
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="card mb-4" data-id="02">
-							<img class="product-img" src="img/roll/california-hit.jpg" alt="jpg">
-							<div class="card-body text-center">
-								<h4 class="item-title">Филадельфия ролл</h4>
-								<p><small class="card-text text-secondary" data-items-in-box> 12 шт.</small></p>
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-									<div class="price">
-										<div class="price__weight text-secondary"><small>380г.</small></div>
-										<div class="price__currency">19,4 руб.</div>
-									</div>
-								</div>
-								<button data-cart href="#" class="btn btn-outline-dark btn-block">добавить в
-									корзину</button>
-							</div>
-						</div>
-					</div>
+				<div class="row" id="products-container">
+					
 				</div>
 				<div class="row">
-					<div class="col-md-6">
-						<div class="card mb-4">
-							<img class="rounded " src="img/roll/philadelphia.jpg" alt="jpg">
-							<div class="card-body text-center">
-								<h4 class="item-title">Филадельфия хит ролл</h4>
-								<p class="card-text text-secondary"><small> 6 шт.</small></p>
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-									<div class="price">
-										<div class="price__weight text-secondary"><small>180г.</small></div>
-										<div class="price__currency">14,4 руб.</div>
-									</div>
-								</div>
-								<button href="#" class="btn btn-outline-dark btn-block">добавить в корзину</button>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="card mb-4">
-							<img class="rounded " src="img/roll/philadelphia.jpg" alt="jpg">
-							<div class="card-body text-center">
-								<h4 class="item-title">Филадельфия хит ролл</h4>
-								<p class="card-text text-secondary"><small> 6 шт.</small></p>
-								<div class="details-wrapper">
-									<div class="items counter-wrapper">
-										<div class="items__control" data-action="minus">-</div>
-										<div class="items__current" data-counter>1</div>
-										<div class="items__control" data-action="plus">+</div>
-									</div>
-									<div class="price">
-										<div class="price__weight text-secondary"><small>180г.</small></div>
-										<div class="price__currency">14,4 руб.</div>
-									</div>
-								</div>
-								<button href="#" class="btn btn-outline-dark btn-block">добавить в корзину</button>
-							</div>
-						</div>
-					</div>
+				
 				</div>
 			</div>
 			<div class="col-md-4">
 				<!-- Корзина -->
 				<div class="card mb-4">
 					<div class="card-body">
-						<h5 class="card-title none">Ваш заказ:</h4>
+						<h5 class="card-title">Ваш заказ:</h4>
 							<div data-cart-empty class="alert alert-info" role="alert">
 								Корзина пуста
 							</div>
@@ -133,10 +48,16 @@
 
 							<!-- Стоимость заказа -->
 							<div class="cart-total">
-								<p><span class="h5">Доставка:</span> <span class="delivery-cost free">бесплатно</span>
+								<p data-delivery-badge class="none">
+									<span class="h5">Доставка:</span>
+									<span class="delivery-cost"></span><br>
+									<span class="small">бесплатная доставка от <span data-delivery-price></span> руб.</span>
 								</p>
-								<p><span class="h5">Итого:</span> <span class="total-price">0</span> <span
-										class="rouble">руб.</span></p>
+								<p>
+									<span class="h5">Итого:</span>
+									<span class="total-price">0</span>
+									<span class="rouble">руб.</span>
+								</p>
 							</div>
 							<!-- // Стоимость заказа -->
 
@@ -160,11 +81,12 @@
 		</div>
 	</div>
 
-	
 	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
 	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/renderProducts.js"></script>
+	<script src="js/priceDelivery.js"></script>
 	<script src="js/calcCartPrice.js"></script>
-	<!-- <script src="js/toogleCartStatus.js"></script> -->
+	<script src="js/toogleCartStatus.js"></script>
 	<script src="js/counter.js"></script>
 	<script src="js/cart.js"></script>
 

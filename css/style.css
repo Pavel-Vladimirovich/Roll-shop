@@ -59,6 +59,10 @@ body, html {
   font-weight: 500;
 }
 
+.delivery-cost {
+  color: #EB5A1E;
+}
+
 .free {
   color: #0EA107;
 }
