@@ -27,7 +27,7 @@ function renderProducts(products) {
 									</div>
 									<div class="price">
 										<div class="price__weight text-secondary"><small>${element.weight} гр.</small></div>
-										<div class="price__currency">${element.price} руб.</div>
+										<div class="price__currency">${element.price.toFixed(2)} руб.</div>
 									</div>
 								</div>
 								<button data-cart href="#" class="btn btn-outline-dark btn-block">добавить в

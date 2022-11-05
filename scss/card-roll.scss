@@ -1,5 +1,5 @@
 .item-title{
-	font-size: 1.5rem;
+	font-size: clamp(1.3rem, 1.2182rem + 0.3636vw, 1.5rem);
 	font-weight: 500;
 	height: 70px;
 }
