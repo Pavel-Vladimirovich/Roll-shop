@@ -8,7 +8,6 @@ async function priceDelivery () {
     const price = await responce.json();
     price.forEach(element => {
         costDelivery.innerHTML = element.delivery.toFixed(2);
-        console.log(element.delivery);
         return element.delivery
     });
 }
