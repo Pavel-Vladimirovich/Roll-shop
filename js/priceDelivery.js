@@ -1,13 +1,13 @@
 
-const costDelivery = document.querySelector('[data-delivery-price]');
 
-priceDelivery();
 
-async function priceDelivery () {
+
+getForPriceDelivery();
+
+async function getForPriceDelivery() {
     const responce = await fetch('./js/priceDelivery.json');
-    const price = await responce.json();
-    price.forEach(element => {
-        costDelivery.innerHTML = element.delivery.toFixed(2);
-        return element.delivery
-    });
+    const info = await responce.json();
+
+    state.setInfoForDelivery(info);
 }
+

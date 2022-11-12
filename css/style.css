@@ -88,7 +88,6 @@ input::-webkit-inner-spin-button {
 }
 
 .form-control.active::placeholder {
-  font-size: 1.1rem;
   font-weight: 600;
 }
 
