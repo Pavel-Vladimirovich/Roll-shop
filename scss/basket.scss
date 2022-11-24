@@ -114,6 +114,6 @@
 	display: none;
 }
 
-.form-control.active::placeholder{
+.form-control._error::placeholder{
 	font-weight: 600;
 }

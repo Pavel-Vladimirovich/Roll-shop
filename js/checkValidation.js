@@ -23,7 +23,7 @@ orderForm.addEventListener('submit', event => {
     event.preventDefault();
     if (!formControl.value) {
         orderForm.appendChild(createElementError('Поле для ввода <br/> не должно быть пустым'));
-        formControl.classList.add('active');
+        formControl.classList.add('_error');
     } else if(formControl.value.length !== 9) {
         orderForm.appendChild(createElementError('Ваш номер должен состоять из 9 цифр'));
     }
